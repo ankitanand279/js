@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplication table</title>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    <label for="h1">Enter a Number:</label>
+    <input type="number" id="h1">
+    <button onclick="tab()">submit</button>
+    <h4 id="table">Multiplication table is :</h4>
+    <script>
+        function tab(){
+            var a = document.getElementById("h1").value;
+            var b = 0;
+            var c = [];
+            while (b<=10){
+               var d = "<br>"+a+"x"+b+"="+(a*b);
+                c[b-1] = d;
+                b = b+1;
+            }
+            document.getElementById("table").innerHTML = "Multiplication table is : " + c;
+        }
+    </script>
+</body>
+</html>

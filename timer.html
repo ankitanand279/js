@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+</head>
+<body>
+    <h1>countdown timer</h1>
+    <input type="datetime-local" id="time">
+    <button onclick="call()" id="time">submit</button>
+    <p id="k">Time Left is :</p>
+    <script>
+        function call(){
+            let x = setInterval(function(){
+                let a = document.getElementById("time").value;
+                let b = new Date(a);
+                let c = new Date().getTime();
+                let diff = b-c;
+                let days = Math.floor(diff/(1000*60*60*24));
+                let hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+                let minutes = Math.floor((diff%(1000*60*60))/(1000*60));
+                let seconds = Math.floor((diff%(1000*60))/(1000));
+                document.getElementById("k").innerHTML= `Time Left is : ${days}d : ${hours}h : ${minutes}m : ${seconds}s`
+                if (a<0){
+                document.getElementById("k").innerHTML="Time Expired";
+            }
+            },1000);
+        }
+    </script>
+</body>
+</html>

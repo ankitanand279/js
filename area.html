@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area</title>
+</head>
+<body>
+    <h1>Area of rectangle</h1>
+    <label for="k1">Enter length: </label>
+    <input type="number" id="k1">
+    <br>
+    <br>
+    <label for="k2">Enter breadth: </label>
+    <input type="number" id="k2">
+    <button onclick="k()">submit</button>
+    <p id="a">output: </p>
+    <script>
+       
+       function k(){
+        var a = document.getElementById("k1").value;
+        var b = document.getElementById("k2").value;
+        var c = a*b;
+        document.getElementById("a").innerHTML = "output: " + c;
+       }
+    </script>
+    <h1>Area of triangle</h1>
+    <label for="k3">Enter base: </label>
+    <input type="number" id="k3">
+    <br>
+    <br>
+    <label for="k4">Enter height: </label>
+    <input type="number" id="k4">
+    <button onclick="kc()">submit</button>
+    <p id="b">output: </p>
+    <script>
+       
+       function kc(){
+        var a = document.getElementById("k3").value;
+        var b = document.getElementById("k4").value;
+        var c = 0.5*a*b;
+        document.getElementById("b").innerHTML = "output: " + c;
+       }
+    </script>
+</body>
+</html>
